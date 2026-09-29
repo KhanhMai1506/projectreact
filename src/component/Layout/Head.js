@@ -78,7 +78,11 @@ function Head() {
             <div className="col-md-8 clearfix">
               <div className="shop-menu clearfix pull-right">
                 <ul className="nav navbar-nav">
-                  <li><a href="#!"><i className="fa fa-user"></i> Account</a></li>
+                  <li>
+                    <Link to="/account/update">
+                      <i className="fa fa-user"></i> Account
+                    </Link>
+                  </li>
                   <li><a href="#!"><i className="fa fa-star"></i> Wishlist</a></li>
                   <li><a href="#!"><i className="fa fa-crosshairs"></i> Checkout</a></li>
                   <li><a href="#!"><i className="fa fa-shopping-cart"></i> Cart</a></li>

@@ -11,18 +11,24 @@ import App from './App';
 import Blog from './component/Blog';
 import BlogDetail from './component/Blog/BlogDetail';
 import reportWebVitals from './reportWebVitals';
+import Index from './component/Member/index';
+import Update from './component/Account/update';
+import MyProduct from './component/Product/MyProduct';
+import AddProduct from './component/Product/AddProduct';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Router>
-      <App>
-        <Routes>
-          <Route path="/" element={<Navigate to="/blog" replace />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/blog/detail/:id" element={<BlogDetail />} />
-        </Routes>
-      </App>
+      <Routes>
+        <Route path="/" element={<Navigate to="/blog" replace />} />
+        <Route path="/blog" element={<App><Blog /></App>} />
+        <Route path="/blog/detail/:id" element={<App><BlogDetail /></App>} />
+        <Route path="/member/login-register" element={<Index />} />
+        <Route path="/account/update" element={<App><Update /></App>} />
+        <Route path="/account/product/list" element={<App><MyProduct /></App>} />
+        <Route path="/account/product/add" element={<App><AddProduct /></App>} />
+      </Routes>
     </Router>
   </React.StrictMode>
 );

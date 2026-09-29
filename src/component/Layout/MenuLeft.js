@@ -30,7 +30,7 @@ const brands = [
   ['Rosch creative culture', 4],
 ];
 
-function MenuLeft() {
+function MenuLeft() {  
   return (
     <div className="left-sidebar">
       <h2>Category</h2>
